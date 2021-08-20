@@ -1,0 +1,42 @@
+.table-btn {
+  background: transparent;
+  border: 2px solid #171819;
+  border-radius: 100px;
+  padding: 10px 24px 12px 24px;
+  color: #171819;
+  font-family: 'Plain-Regular', sans-serif;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+/* .screen-btn.btn-bg:hover, */
+.table-btn.btn-bg:focus {
+  background: #171819;
+  color: #fff;
+  border-color: transparent;
+}
+
+.screen-btn.btn-bg:hover{
+  background: #171819;
+  border-color: transparent;
+  color: #fff;
+}
+
+.exit-btn.btn-bg:hover{
+  background: #b90e0a;
+  border-color: transparent;
+  color: white;
+}
+
+.e-dialog .e-dlg-header {
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.table-btn.btn-bg {
+  background: #fff;
+  color: #057a8d;
+  border-color: transparent;
+  transition: all .3s ease;
+}
