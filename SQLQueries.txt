@@ -1,0 +1,36 @@
+create database inputfiles;
+use inputfiles;
+
+create table TRANSACTION(
+TRANSACTION_REF varchar(12) primary key,
+VALUE_DATE date not null,
+PAYER_NAME varchar(35) not null,
+PAYER_ACCOUNT varchar(12) not null,
+PAYEE_NAME varchar(35) not null,
+PAYEE_ACCOUNT varchar(12) not null,
+AMOUNT double not null,
+STATUS varchar(25));
+
+select * from transaction;
+truncate table transaction;
+select * from Screenfail;
+truncate table screenfail;
+
+create table sanctionlist(
+	ID int  primary key,
+	NAME varchar(20)
+);
+insert into sanctionlist values(1, "NanyaNewton");
+insert into sanctionlist values(2, "OsamaBinLaden");
+insert into sanctionlist values(3, "Taliban");
+insert into sanctionlist values(4, "mohinichawal");
+
+create table SCREENFAIL(
+TRANSACTION_REF varchar(12)  primary key,
+VALUE_DATE date not null,
+PAYER_NAME varchar(35) not null,
+PAYER_ACCOUNT varchar(12) not null,
+PAYEE_NAME varchar(35) not null,
+PAYEE_ACCOUNT varchar(12) not null,
+AMOUNT double not null,STATUS varchar(25)
+);
