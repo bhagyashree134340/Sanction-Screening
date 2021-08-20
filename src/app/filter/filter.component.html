@@ -1,0 +1,44 @@
+<div class="filter-container">
+    <div class="container">
+        <mat-form-field appearance="outline" color="accent" background-color="accent" style="position: absolute;">
+            <mat-label style="color: #fff;">Select an option</mat-label>
+            <mat-select color="accent" [(value)]="selected" style="color:#fff;">
+                <mat-option color="accent" value="all">All Transactions</mat-option>
+                <mat-option color="accent" value="screen-pass">Screen Pass</mat-option>
+                <mat-option color="accent" value="screen-fail">Screen Fail</mat-option>
+                <mat-option value="validation-pass">Validation Pass</mat-option>
+                <mat-option value="validation-fail">Validation Fail</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div *ngIf="selected=='all'; else elseBlock">
+            <app-all-transactions></app-all-transactions>
+        </div>
+
+        <ng-template #elseBlock>
+            <div *ngIf="selected=='screen-pass'; else notScreenPass">
+                <app-screen-pass></app-screen-pass>
+            </div>
+            <ng-template #notScreenPass>
+                <div *ngIf="selected=='screen-fail'; else notScreenFail">
+                    <app-screen-fail></app-screen-fail>
+                </div>
+                <ng-template #notScreenFail>
+                    <div *ngIf="selected=='validation-pass'; else validationFail">
+                        <app-validation-pass></app-validation-pass>
+                    </div>
+                    <ng-template #validationFail>
+                        <div *ngIf="selected=='validation-fail'; else none">
+                            <app-validation-fail></app-validation-fail>
+                        </div>
+                        <ng-template #none>
+                            <div></div>
+                        </ng-template>
+                    </ng-template>
+                </ng-template>
+            </ng-template>
+        </ng-template>
+
+        <!-- <p>You selected: {{selected}}</p> -->
+    </div>
+</div>

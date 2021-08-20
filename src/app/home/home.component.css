@@ -1,0 +1,22 @@
+.hero-bg {
+  background: linear-gradient(170deg, #057a8d 64%, #fff 30%);
+}
+
+.hero {
+  position: relative;
+  padding: 1.5em 0;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: relative;
+  top: 2em;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  color: #f1c111;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: red;
+}

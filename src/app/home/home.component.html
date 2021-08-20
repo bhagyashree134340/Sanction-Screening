@@ -1,0 +1,91 @@
+<!-- <mat-card>Simple card</mat-card>
+
+<button mat-button>Basic</button>
+<button mat-button color="primary">Primary</button>
+<button mat-button color="accent">Accent</button>
+<button mat-button color="warn">Warn</button>
+<button mat-button disabled>Disabled</button>
+
+<button mat-raised-button>Basic</button>
+<button mat-raised-button color="primary">Primary</button>
+<button mat-raised-button color="accent">Accent</button>
+<button mat-raised-button color="warn">Warn</button>
+<button mat-raised-button disabled>Disabled</button>
+
+<mat-card>
+    Main Theme:
+    <button mat-raised-button color="primary">
+        Primary
+    </button>
+    <button mat-raised-button color="accent">
+        Accent
+    </button>
+    <button mat-raised-button color="warn">
+        Warning
+    </button>
+</mat-card>
+<mat-card class="alternate-theme">
+    Alternate Theme:
+    <button mat-raised-button color="primary">
+        Primary
+    </button>
+    <button mat-raised-button color="accent">
+        Accent
+    </button>
+    <button mat-raised-button color="warn">
+        Warning
+    </button>
+</mat-card> -->
+
+<section class="hero hero-bg d-flex justify-content-center align-items-center">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                <div class="hero-text">
+                    <h1 class="text-white" data-aos="fade-up">Get going to screen shady transactions.</h1>
+                    <br>
+                    <mat-form-field appearance="fill" color="accent">
+                        <mat-label style="color: #fff;">Select File</mat-label>
+                        <ngx-mat-file-input [accept]="'.txt'" style="color: #fff;" (change)="fileInputChange(upload, 'colorChange', $event)" formControlName="requiredfile" placeholder="Basic Input" #upload required></ngx-mat-file-input>
+                        <mat-icon matSuffix style="color: #fff;">folder</mat-icon>
+                    </mat-form-field>
+                    <!-- <button (click)="onSubmit(upload)" routerLink="/filter" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100" style="margin-left: 40px; margin-top: -20px !important;" [disabled]="submitDisabled">Upload File</button> -->
+                    <button #uploadBtn class="custom-btn btn-bg btn mt-3" (click)="onSubmit(upload)" routerLink="/filter" disabled=false style="margin-left: 40px; margin-top: -20px !important">
+                        Upload File
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-12">
+                <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
+                    <img src="../../assets/resources/images/working-girl.png" class="img-fluid" alt="working girl">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- <mat-form-field appearance="fill">
+    <mat-label>Select File</mat-label>
+    <ngx-mat-file-input (change)="fileInputChange(upload)" formControlName="requiredfile" placeholder="Basic Input" #upload required></ngx-mat-file-input>
+    <mat-icon matSuffix> attach_file</mat-icon>
+</mat-form-field>
+<div>
+    <button (click)="onSubmit(upload)" routerLink="/filter" mat-raised-button color="primary" [disabled]="submitDisabled">
+        Upload File
+    </button>
+</div> -->
+
+
+<!-- <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6" style="background-color: aqua;">
+            Hello
+        </div>
+        <div class="col-lg-6" style="background-color: blanchedalmond;">
+            Hello
+        </div>
+    </div>
+</div> -->

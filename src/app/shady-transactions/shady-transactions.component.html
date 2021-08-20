@@ -1,0 +1,42 @@
+<div class="filter-container">
+    <div class="container">
+        <!-- <mat-form-field appearance="outline" color="accent">
+            <mat-label color="accent">Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+                <input matStartDate placeholder="Start date">
+                <input matEndDate placeholder="End date" >
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field> -->
+        <button class="table-btn exit-btn bg-danger text-white btn-bg btn" (click)="exit()" routerLink="/"
+            style="position:relative; left:84.5%; top:3px; margin:0px">Exit Screening</button>
+
+        <table class="table table-danger table-striped" style="margin-top: 40px;">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>Date</th>
+                    <th>Payer Name</th>
+                    <th>Payer Account</th>
+                    <th>Payee Name</th>
+                    <th>Payee Account</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let t of transactions">
+                    <td>{{t.transactionRef}}</td>
+                    <td>{{t.valueDate}}</td>
+                    <td>{{t.payerName}}</td>
+                    <td>{{t.payerAccount}}</td>
+                    <td>{{t.payeeName}}</td>
+                    <td>{{t.payeeAccount}}</td>
+                    <td>{{t.amount}}</td>
+                    <td>{{t.status}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
