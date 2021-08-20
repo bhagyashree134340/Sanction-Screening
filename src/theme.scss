@@ -1,0 +1,51 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+/* For use in src/lib/core/theming/_palette.scss */
+$my-palette: (
+    50 : #e2f0f2,
+    100 : #b6d9df,
+    200 : #86c0ca,
+    300 : #55a7b5,
+    400 : #3094a5,
+    500 : #0c8195,
+    600 : #0a798d,
+    700 : #086e82,
+    800 : #066478,
+    900 : #035167,
+    A100 : #96e5ff,
+    A200 : #63d8ff,
+    A400 : #30cbff,
+    A700 : #17c4ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+
+$my-app-primary: mat-palette($my-palette,500);
+$my-app-accent:  mat-palette($mat-amber, 500);
+$my-app-warn:    mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-light-blue);
+  $alternate-accent:  mat-palette($mat-yellow, 400);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+  @include angular-material-theme($alternate-theme);
+}
